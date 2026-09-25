@@ -630,24 +630,11 @@ install_symlink {
     symlink_target: "/mnt/vendor/persist/rfs/shared",
 }
 
-mkdir {
-    name: "vendor_bt_firmware_mountpoint",
-    dir: "bt_firmware",
-    vendor: true,
-}
-
-mkdir {
-    name: "vendor_dsp_mountpoint",
-    dir: "dsp",
-    vendor: true,
-}
-
-mkdir {
-    name: "vendor_firmware_mnt_mountpoint",
-    dir: "firmware_mnt",
-    vendor: true,
-}
-
+// NB: bt_firmware / dsp / firmware_mnt are also created (with their symlinks)
+// by QCOM's legacy AndroidBoardCommon.mk, which AOSPA pulls in via
+// device/qcom/common/Android.mk. Soong emits these mkdir rules unconditionally,
+// so keeping them here collides with the legacy make rules (duplicate target).
+// Dropped the three that overlap; firmware-modem has no legacy counterpart.
 mkdir {
     name: "vendor_firmware-modem_mountpoint",
     dir: "firmware-modem",
