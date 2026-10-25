@@ -1,0 +1,8 @@
+# Copyright (C) 2026 The PenguinOS Project
+# SPDX-License-Identifier: Apache-2.0
+
+# Laminar reads supported GPU clocks to choose device-specific GPU votes.
+allow hal_power_default vendor_sysfs_kgsl:dir search;
+allow hal_power_default vendor_sysfs_kgsl:file { getattr open read };
+allow hal_power_default vendor_sysfs_devfreq:dir search;
+allow hal_power_default vendor_sysfs_devfreq:file { getattr open read };
