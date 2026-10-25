@@ -149,5 +149,7 @@ ________________________________________________________________________________
                 <Prop Name="vendor.prefapps.pkg_retention_mins" Value="28800" />
                 <Prop Name="vendor.prefapps.last_launch_threshold" Value="21600" />
 
+                <Prop Name="vendor.perf.expensive_rendering" Value="1" />
+
     </PerfConfigs>
 </PerfConfigsStore>
