@@ -34,7 +34,7 @@ PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.custom_ecc=1 \
     persist.vendor.radio.procedure_bytes=SKIP \
     persist.vendor.radio.sib16_support=1 \
-    persist.vendor.ssr.restart_level=ALL_ENABLE
+    persist.vendor.ssr.restart_level?=ALL_ENABLE
 
 PRODUCT_VENDOR_PROPERTIES += \
     persist.vendor.radio.enableadvancedscan=true
